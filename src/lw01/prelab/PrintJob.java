@@ -6,20 +6,21 @@ public abstract class PrintJob implements Chargeable {
     private int pages;
 
     public PrintJob(String id, int pages) {
+        
         if (pages <= 0) {
             throw new IllegalArgumentException();
         }
-
+        
         this.id = id;
         this.pages = pages;
     }
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public int getPages() {
-        return pages;
+        return this.pages;
     }
 
     @Override
